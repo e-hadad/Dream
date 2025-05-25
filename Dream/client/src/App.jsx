@@ -24,6 +24,16 @@ import Orderhistory from './Components/features/Product/ComponnentsNavBar/Orderh
 function App() {
   const [count, setCount] = useState(0)
 
+// useEffect(() => {
+//   fetch('http://localhost:3001/api/products')
+//     .then(res => res.json())
+//     .then(data => setProducts(data));
+// }, []);
+useEffect(() => {
+  fetch(`${process.env.REACT_APP_API_URL}/api/products`)
+    .then(res => res.json())
+    .then(data => setProducts(data));
+}, []);
 
   return (
 
