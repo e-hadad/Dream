@@ -1,0 +1,51 @@
+.productSignal {
+  width: 280px;
+  background: linear-gradient(135deg, #fef6fb, #f6fefc, #fdfdfb);
+  border-radius: 18px;
+  box-shadow: 0 6px 14px rgba(210, 190, 220, 0.2);
+  overflow: hidden;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.productSignal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(160, 150, 180, 0.3);
+}
+
+.productSignal img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #f3e9fa;
+}
+
+.productSignal h3 {
+  font-size: 1.2rem;
+  margin: 0.8rem 0 0.3rem 0;
+  color: #6b577f;
+  text-align: center;
+}
+
+.productSignal h5 {
+  color: #c298e8;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.productSignal h6 {
+  font-size: 0.85rem;
+  color: #7a6d8a;
+  text-align: center;
+  margin: 0 1rem 0.4rem 1rem;
+  min-height: 48px;
+}
+
+.productSignal h6:last-child {
+  font-weight: 600;
+  color: #998db0;
+}

@@ -1,0 +1,67 @@
+.user-orders {
+    padding: 20px;
+    direction: rtl;
+    max-width: 800px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.order-summary {
+    width: 50vw;
+    border: 1px solid #eeddf1;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #fef6fb, #f6fefc, #fdfdfb);
+    box-shadow: 0 4px 12px rgba(210, 190, 220, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-summary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(180, 160, 200, 0.25);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #6b577f;
+    font-weight: 600;
+}
+
+.order-details {
+    margin-top: 16px;
+}
+
+.order-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(200, 180, 220, 0.1);
+}
+
+.order-details th, .order-details td {
+    border: 1px solid #f3e9fa;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #7a6d8a;
+}
+
+.order-details th {
+    background-color: #f9f3fb;
+    color: #6b577f;
+    font-weight: 700;
+}
+.user-orders {
+    padding: 20px;
+    direction: rtl;
+    max-width: 800px;
+    margin: calc(60px + 20px) auto 0 auto; /* 60px לגובה ה-navbar + 20px רווח */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,636 @@
+// [
+//   {
+//     "id": 1,
+//     "title": "טקטורון שטח 12V",
+//     "price": 890.00,
+//     "description": "טקטורון חשמלי לילדים עם מושב כפול וגלגלי שטח.",
+//     "category": "טקטורונים",
+//     "image": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6",
+//     "rating": { "rate": 4.6, "count": 98 }
+//   },
+//   {
+//     "id": 2,
+//     "title": "טקטורון עם שלט רחוק",
+//     "price": 950.00,
+//     "description": "טקטורון חשמלי לילדים עם שלט רחוק והגה מתכוונן.",
+//     "category": "טקטורונים",
+//     "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+//     "rating": { "rate": 4.7, "count": 89 }
+//   },
+//   {
+//     "id": 3,
+//     "title": "טקטורון ספורטיבי 24V",
+//     "price": 1100.00,
+//     "description": "טקטורון עוצמתי עם מנוע כפול וגלגלי שטח גדולים.",
+//     "category": "טקטורונים",
+//     "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+//     "rating": { "rate": 4.8, "count": 76 }
+//   },
+//   {
+//     "id": 4,
+//     "title": "טקטורון קומפקטי 6V",
+//     "price": 650.00,
+//     "description": "טקטורון קטן ונוח עם גלגלים רחבים ויציבים.",
+//     "category": "טקטורונים",
+//     "image": "https://images.unsplash.com/photo-1549924231-f129b911e442",
+//     "rating": { "rate": 4.4, "count": 65 }
+//   },
+//   {
+//     "id": 5,
+//     "title": "טקטורון דו מושבי 24V",
+//     "price": 1200.00,
+//     "description": "טקטורון עם שני מושבים, מושלם למשפחות.",
+//     "category": "טקטורונים",
+//     "image": "https://images.unsplash.com/photo-1530018607910-5f9c698a329e",
+//     "rating": { "rate": 4.9, "count": 80 }
+//   },
+//   {
+//     "id": 6,
+//     "title": "טקטורון עם גלגלי שטח עבים",
+//     "price": 1020.00,
+//     "description": "טקטורון מיוחד לנסיעות בשטח קשים עם גלגלים גדולים.",
+//     "category": "טקטורונים",
+//     "image": "https://images.unsplash.com/photo-1540206395-8f6e0d457eff",
+//     "rating": { "rate": 4.6, "count": 77 }
+//   },
+//   {
+//     "id": 7,
+//     "title": "טקטורון חשמלי קל משקל",
+//     "price": 700.00,
+//     "description": "טקטורון לילדים עם שלדה קלה ונוחה להפעלה.",
+//     "category": "טקטורונים",
+//     "image": "https://images.unsplash.com/photo-1517949908111-7c8d7583b9ee",
+//     "rating": { "rate": 4.3, "count": 70 }
+//   },
+//   {
+//     "id": 8,
+//     "title": "טקטורון עם שלט מובנה",
+//     "price": 900.00,
+//     "description": "טקטורון עם שלט הורים מובנה ואפשרויות בטיחות נוספות.",
+//     "category": "טקטורונים",
+//     "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+//     "rating": { "rate": 4.5, "count": 68 }
+//   },
+//   {
+//     "id": 9,
+//     "title": "טקטורון עם מושב מתכוונן",
+//     "price": 950.00,
+//     "description": "טקטורון נוח עם מושב מתכוונן לנסיעה ארוכה.",
+//     "category": "טקטורונים",
+//     "image": "https://images.unsplash.com/photo-1507149833265-60c372daea22",
+//     "rating": { "rate": 4.7, "count": 74 }
+//   },
+//   {
+//     "id": 10,
+//     "title": "טקטורון עם חבילת אבזור מלאה",
+//     "price": 1150.00,
+//     "description": "טקטורון איכותי עם אורות, מוזיקה וכיסויים למושב.",
+//     "category": "טקטורונים",
+//     "image": "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b",
+//     "rating": { "rate": 4.8, "count": 81 }
+//   },
+
+//   {
+//     "id": 11,
+//     "title": "ג'יפ חשמלי לילדים",
+//     "price": 950.00,
+//     "description": "רכב שטח חשמלי עם שלט הורים, אורות ומוזיקה.",
+//     "category": "ג'יפים",
+//     "image": "https://images.unsplash.com/photo-1565611562515-ea3a1502083f",
+//     "rating": { "rate": 4.7, "count": 132 }
+//   },
+//   {
+//     "id": 12,
+//     "title": "ג'יפ דו מושבי עם מושבים נוחים",
+//     "price": 1200.00,
+//     "description": "ג'יפ חשמלי עם מושבים מרופדים ושלט רחוק.",
+//     "category": "ג'יפים",
+//     "image": "https://images.unsplash.com/photo-1530018607910-5f9c698a329e",
+//     "rating": { "rate": 4.8, "count": 102 }
+//   },
+//   {
+//     "id": 13,
+//     "title": "ג'יפ שטח לילדים עם גלגלי שטח",
+//     "price": 1100.00,
+//     "description": "ג'יפ עוצמתי עם גלגלים גדולים למעבר בשטח.",
+//     "category": "ג'יפים",
+//     "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+//     "rating": { "rate": 4.6, "count": 110 }
+//   },
+//   {
+//     "id": 14,
+//     "title": "ג'יפ קלאסי לילדים",
+//     "price": 850.00,
+//     "description": "ג'יפ חשמלי עם עיצוב קלאסי ומושבים נוחים.",
+//     "category": "ג'יפים",
+//     "image": "https://images.unsplash.com/photo-1549924231-f129b911e442",
+//     "rating": { "rate": 4.4, "count": 75 }
+//   },
+//   {
+//     "id": 15,
+//     "title": "ג'יפ ספורטיבי עם מנוע חזק",
+//     "price": 1300.00,
+//     "description": "ג'יפ חשמלי עם מנוע עוצמתי לנסיעה מהירה ובטוחה.",
+//     "category": "ג'יפים",
+//     "image": "https://images.unsplash.com/photo-1517949908111-7c8d7583b9ee",
+//     "rating": { "rate": 4.9, "count": 90 }
+//   },
+//   {
+//     "id": 16,
+//     "title": "ג'יפ דו מושבי עם שלט הורים",
+//     "price": 1250.00,
+//     "description": "ג'יפ עם שלט רחוק לשליטה מלאה של ההורים.",
+//     "category": "ג'יפים",
+//     "image": "https://images.unsplash.com/photo-1507149833265-60c372daea22",
+//     "rating": { "rate": 4.7, "count": 80 }
+//   },
+//   {
+//     "id": 17,
+//     "title": "ג'יפ עם מערכת מוזיקה",
+//     "price": 1150.00,
+//     "description": "ג'יפ עם מערכת מוזיקה מובנית ואורות צבעוניים.",
+//     "category": "ג'יפים",
+//     "image": "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b",
+//     "rating": { "rate": 4.6, "count": 70 }
+//   },
+//   {
+//     "id": 18,
+//     "title": "ג'יפ חשמלי עם מושבים מתכווננים",
+//     "price": 1350.00,
+//     "description": "ג'יפ עם מושבים מתכווננים לנסיעה נוחה יותר.",
+//     "category": "ג'יפים",
+//     "image": "https://images.unsplash.com/photo-1608571423902-46e8792e3a08",
+//     "rating": { "rate": 4.8, "count": 85 }
+//   },
+//   {
+//     "id": 19,
+//     "title": "ג'יפ דו מושבי עם חבילת אבזור",
+//     "price": 1400.00,
+//     "description": "ג'יפ עם אבזור מלא כולל חגורות בטיחות ומגני שמש.",
+//     "category": "ג'יפים",
+//     "image": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6",
+//     "rating": { "rate": 4.9, "count": 95 }
+//   },
+//   {
+//     "id": 20,
+//     "title": "ג'יפ חשמלי קומפקטי",
+//     "price": 900.00,
+//     "description": "ג'יפ חשמלי קטן ונוח לנסיעה בשטחים צרים.",
+//     "category": "ג'יפים",
+//     "image": "https://images.unsplash.com/photo-1611186871348-f54e059e5301",
+//     "rating": { "rate": 4.5, "count": 60 }
+//   },
+
+//   {
+//     "id": 21,
+//     "title": "אופני הרים אדומים",
+//     "price": 350.00,
+//     "description": "אופני הרים איכותיים לילדים עם 21 הילוכים.",
+//     "category": "אופניים",
+//     "image": "https://images.unsplash.com/photo-1595480097990-0e1b2b2e6f0b",
+//     "rating": { "rate": 4.6, "count": 122 }
+//   },
+//   {
+//     "id": 22,
+//     "title": "אופני עיר קלאסיים",
+//     "price": 299.00,
+//     "description": "אופני עיר עם סל קדמי ומושב מרופד.",
+//     "category": "אופניים",
+//     "image": "https://images.unsplash.com/photo-1571003123894-1e6b9e6b2c53",
+//     "rating": { "rate": 4.2, "count": 67 }
+//   },
+//   {
+//     "id": 23,
+//     "title": "אופני ילדים כחולים",
+//     "price": 320.00,
+//     "description": "אופני ילדים עם גלגלי עזר ועיצוב צבעוני.",
+//     "category": "אופניים",
+//     "image": "https://images.unsplash.com/photo-1509395176047-4a66953fd231",
+//     "rating": { "rate": 4.3, "count": 55 }
+//   },
+//   {
+//     "id": 24,
+//     "title": "אופני עיר מתקפלים",
+//     "price": 430.00,
+//     "description": "אופני עיר קלות לנשיאה עם מנגנון מתקפל פשוט.",
+//     "category": "אופניים",
+//     "image": "https://images.unsplash.com/photo-1520975692630-7fbb027a66e3",
+//     "rating": { "rate": 4.5, "count": 74 }
+//   },
+//   {
+//     "id": 25,
+//     "title": "אופני כביש מהירים",
+//     "price": 650.00,
+//     "description": "אופני כביש עם שלדה קלה לנסיעה מהירה וארוכה.",
+//     "category": "אופניים",
+//     "image": "https://images.unsplash.com/photo-1504198453319-5ce911bafcde",
+//     "rating": { "rate": 4.7, "count": 80 }
+//   },
+//   {
+//     "id": 26,
+//     "title": "אופני עיר עם סל אחורי",
+//     "price": 380.00,
+//     "description": "אופני עיר עם סל אחורי לאחסון ונסיעה נוחה.",
+//     "category": "אופניים",
+//     "image": "https://images.unsplash.com/photo-1468071174046-657d9d351a40",
+//     "rating": { "rate": 4.4, "count": 65 }
+//   },
+//   {
+//     "id": 27,
+//     "title": "אופני ילדים צבעוניים",
+//     "price": 270.00,
+//     "description": "אופניים לילדים עם עיצוב צבעוני וגלגלי עזר.",
+//     "category": "אופניים",
+//     "image": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e",
+//     "rating": { "rate": 4.2, "count": 50 }
+//   },
+//   {
+//     "id": 28,
+//     "title": "אופני הרים מקצועיים",
+//     "price": 850.00,
+//     "description": "אופני הרים עם מערכת בלמים משודרגת וגלגלים גדולים.",
+//     "category": "אופניים",
+//     "image": "https://images.unsplash.com/photo-1508780709619-79562169bc64",
+//     "rating": { "rate": 4.8, "count": 90 }
+//   },
+//   {
+//     "id": 29,
+//     "title": "אופני עיר עם ידית אחיזה נוחה",
+//     "price": 410.00,
+//     "description": "אופני עיר עם ידיות אחיזה נוחות לסיבובים קלים.",
+//     "category": "אופניים",
+//     "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e",
+//     "rating": { "rate": 4.3, "count": 60 }
+//   },
+//   {
+//     "id": 30,
+//     "title": "אופני ילדים עם מערכת הילוכים",
+//     "price": 370.00,
+//     "description": "אופניים לילדים עם 6 הילוכים ונעילת גלגלים.",
+//     "category": "אופניים",
+//     "image": "https://images.unsplash.com/photo-1503602642458-232111445657",
+//     "rating": { "rate": 4.5, "count": 70 }
+//   },
+
+//   {
+//     "id": 31,
+//     "title": "קורקינט חשמלי חזק",
+//     "price": 799.00,
+//     "description": "קורקינט חשמלי עם מנוע 350W ובטרייה עוצמתית.",
+//     "category": "קורקינטים",
+//     "image": "https://images.unsplash.com/photo-1608571423902-46e8792e3a08",
+//     "rating": { "rate": 4.4, "count": 88 }
+//   },
+//   {
+//     "id": 32,
+//     "title": "קורקינט מתקפל",
+//     "price": 480.00,
+//     "description": "קורקינט חשמלי מתקפל עם מסך דיגיטלי.",
+//     "category": "קורקינטים",
+//     "image": "https://images.unsplash.com/photo-1602584581312-d1fa1e48c2d6",
+//     "rating": { "rate": 4.5, "count": 91 }
+//   },
+//   {
+//     "id": 33,
+//     "title": "קורקינט לילדים קל משקל",
+//     "price": 350.00,
+//     "description": "קורקינט ידידותי לילדים עם גלגלי סיליקון.",
+//     "category": "קורקינטים",
+//     "image": "https://images.unsplash.com/photo-1504215680853-026ed2a45def",
+//     "rating": { "rate": 4.1, "count": 47 }
+//   },
+//   {
+//     "id": 34,
+//     "title": "קורקינט מקצועי למבוגרים",
+//     "price": 899.00,
+//     "description": "קורקינט עמיד ומהיר עם שלדה מתכתית חזקה.",
+//     "category": "קורקינטים",
+//     "image": "https://images.unsplash.com/photo-1587614382346-4ec58f3a5237",
+//     "rating": { "rate": 4.6, "count": 80 }
+//   },
+//   {
+//     "id": 35,
+//     "title": "קורקינט ספורטיבי עם גלגלים גדולים",
+//     "price": 750.00,
+//     "description": "קורקינט עם גלגלי שטח גדולים לנסיעות חלקות.",
+//     "category": "קורקינטים",
+//     "image": "https://images.unsplash.com/photo-1503602642458-232111445657",
+//     "rating": { "rate": 4.3, "count": 55 }
+//   },
+//   {
+//     "id": 36,
+//     "title": "קורקינט עם בלמים כפולים",
+//     "price": 820.00,
+//     "description": "קורקינט עם מערכת בלמים כפולה לנסיעה בטוחה.",
+//     "category": "קורקינטים",
+//     "image": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e",
+//     "rating": { "rate": 4.5, "count": 70 }
+//   },
+//   {
+//     "id": 37,
+//     "title": "קורקינט קל משקל עם מנוע חזק",
+//     "price": 670.00,
+//     "description": "קורקינט נייד וקל להפעלה עם מנוע עוצמתי.",
+//     "category": "קורקינטים",
+//     "image": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6",
+//     "rating": { "rate": 4.4, "count": 65 }
+//   },
+//   {
+//     "id": 38,
+//     "title": "קורקינט חשמלי עם תאורה קדמית ואחורית",
+//     "price": 730.00,
+//     "description": "קורקינט עם מערכת תאורה מלאה לנסיעה בלילה.",
+//     "category": "קורקינטים",
+//     "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+//     "rating": { "rate": 4.6, "count": 72 }
+//   },
+//   {
+//     "id": 39,
+//     "title": "קורקינט עם שלט שליטה מרחוק",
+//     "price": 780.00,
+//     "description": "קורקינט עם שלט שליטה להורים לילדים.",
+//     "category": "קורקינטים",
+//     "image": "https://images.unsplash.com/photo-1530018607910-5f9c698a329e",
+//     "rating": { "rate": 4.5, "count": 69 }
+//   },
+//   {
+//     "id": 40,
+//     "title": "קורקינט חשמלי מתקדם עם GPS",
+//     "price": 950.00,
+//     "description": "קורקינט עם מערכת GPS מובנית למעקב וניווט.",
+//     "category": "קורקינטים",
+//     "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+//     "rating": { "rate": 4.8, "count": 77 }
+//   },
+
+//   {
+//     "id": 41,
+//     "title": "הוברבורד דו-גלגלי",
+//     "price": 550.00,
+//     "description": "הוברבורד עם איזון עצמי ומנוע עוצמתי.",
+//     "category": "הוברבורד – סגווי",
+//     "image": "https://images.unsplash.com/photo-1549924231-f129b911e442",
+//     "rating": { "rate": 4.5, "count": 100 }
+//   },
+//   {
+//     "id": 42,
+//     "title": "הוברבורד עם שלט רחוק",
+//     "price": 600.00,
+//     "description": "הוברבורד עם שלט לשליטה מהירה ובטוחה.",
+//     "category": "הוברבורד – סגווי",
+//     "image": "https://images.unsplash.com/photo-1517949908111-7c8d7583b9ee",
+//     "rating": { "rate": 4.7, "count": 90 }
+//   },
+//   {
+//     "id": 43,
+//     "title": "הוברבורד עם גלגלי שטח",
+//     "price": 650.00,
+//     "description": "הוברבורד עמיד לנסיעות בשטח עם גלגלים רחבים.",
+//     "category": "הוברבורד – סגווי",
+//     "image": "https://images.unsplash.com/photo-1507149833265-60c372daea22",
+//     "rating": { "rate": 4.6, "count": 85 }
+//   },
+//   {
+//     "id": 44,
+//     "title": "הוברבורד קומפקטי וקל משקל",
+//     "price": 530.00,
+//     "description": "הוברבורד נייד וקל משקל לנשיאה נוחה.",
+//     "category": "הוברבורד – סגווי",
+//     "image": "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b",
+//     "rating": { "rate": 4.4, "count": 70 }
+//   },
+//   {
+//     "id": 45,
+//     "title": "הוברבורד מתקדם עם מערכת בטיחות",
+//     "price": 700.00,
+//     "description": "הוברבורד עם מערכת בטיחות ומערכת בלמים חכמה.",
+//     "category": "הוברבורד – סגווי",
+//     "image": "https://images.unsplash.com/photo-1608571423902-46e8792e3a08",
+//     "rating": { "rate": 4.8, "count": 95 }
+//   },
+//   {
+//     "id": 46,
+//     "title": "הוברבורד עם מערכת מוזיקה",
+//     "price": 680.00,
+//     "description": "הוברבורד עם רמקולים מובנים למוזיקה בזמן נסיעה.",
+//     "category": "הוברבורד – סגווי",
+//     "image": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6",
+//     "rating": { "rate": 4.7, "count": 78 }
+//   },
+//   {
+//     "id": 47,
+//     "title": "הוברבורד ספורטיבי עם גלגלים מהירים",
+//     "price": 720.00,
+//     "description": "הוברבורד עם גלגלים מהירים ומנוע חזק.",
+//     "category": "הוברבורד – סגווי",
+//     "image": "https://images.unsplash.com/photo-1540206395-8f6e0d457eff",
+//     "rating": { "rate": 4.6, "count": 72 }
+//   },
+//   {
+//     "id": 48,
+//     "title": "הוברבורד דו-גלגלי מתקדם",
+//     "price": 740.00,
+//     "description": "הוברבורד עם מערכת איזון מתקדמת ואורות LED.",
+//     "category": "הוברבורד – סגווי",
+//     "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+//     "rating": { "rate": 4.7, "count": 85 }
+//   },
+//   {
+//     "id": 49,
+//     "title": "הוברבורד עם שלט שליטה מרחוק",
+//     "price": 690.00,
+//     "description": "הוברבורד עם שלט לשליטה מלאה ונוחה.",
+//     "category": "הוברבורד – סגווי",
+//     "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70",
+//     "rating": { "rate": 4.5, "count": 77 }
+//   },
+//   {
+//     "id": 50,
+//     "title": "הוברבורד עם סוללה חזקה במיוחד",
+//     "price": 750.00,
+//     "description": "הוברבורד עם סוללה עוצמתית לנסיעות ארוכות.",
+//     "category": "הוברבורד – סגווי",
+//     "image": "https://images.unsplash.com/photo-1530018607910-5f9c698a329e",
+//     "rating": { "rate": 4.8, "count": 90 }
+//   },
+
+//   {
+//     "id": 51,
+//     "title": "רייזר ילדים מקצועי",
+//     "price": 350.00,
+//     "description": "רייזר לילדים עם גלגלי עזר ומושב נוח.",
+//     "category": "רייזר",
+//     "image": "https://cdna.wobily.com/images/001b6023-19af-4417-93b5-6da9d43acd45_500.png",
+//     "rating": { "rate": 4.4, "count": 65 }
+//   },
+//   {
+//     "id": 52,
+//     "title": "רייזר חשמלי מתקפל",
+//     "price": 420.00,
+//     "description": "רייזר חשמלי עם מנגנון מתקפל לנשיאה נוחה.",
+//     "category": "רייזר",
+//     "image": " https://cdna.wobily.com/images/6a5eafa0-3f6b-41bf-922e-c88976042755_500.png",    
+//     "rating": { "rate": 4.5, "count": 70 }
+//   },
+//   {
+//     "id": 53,
+//     "title": "רייזר עם גלגלים עבים לנסיעות שטח",
+//     "price": 480.00,
+//     "description": "רייזר מיוחד לנסיעות בשטח עם גלגלים רחבים.",
+//     "category": "רייזר",
+//     "image": " https://cdna.wobily.com/images/2d4b5786-4eef-48cb-b957-e1e3f33639e1_500.png",
+//     "rating": { "rate": 4.6, "count": 80 }
+//   },
+//   {
+//     "id": 54,
+//     "title": "רייזר מהיר למבוגרים",
+//     "price": 520.00,
+//     "description": "רייזר עם מנוע עוצמתי לנסיעה מהירה ובטוחה.",
+//     "category": "רייזר",
+//     "image": " https://cdna.wobily.com/images/e937b0ff-5d16-42db-a74c-069cf89d3447_500.png",
+//     "rating": { "rate": 4.7, "count": 75 }
+//   },
+//   {
+//     "id": 55,
+//     "title": "רייזר קומפקטי וקל משקל",
+//     "price": 390.00,
+//     "description": "רייזר נייד וקל להפעלה, מתאים לנסיעות עירוניות.",
+//     "category": "רייזר",
+//     "image": " https://cdna.wobily.com/images/a0e196d3-da80-444f-b81e-183311255a2a_500.png",
+//     "rating": { "rate": 4.3, "count": 60 }
+//   },
+//   {
+//     "id": 56,
+//     "title": "רייזר עם מערכת בלמים משודרגת",
+//     "price": 450.00,
+//     "description": "רייזר עם מערכת בלמים כפולה לנסיעה בטוחה.",
+//     "category": "רייזר",
+//     "image": "https://cdna.wobily.com/images/ce244e68-378a-40e0-a938-b3eb93c61579_500.png",
+//     "rating": { "rate": 4.6, "count": 70 }
+//   },
+//   {
+//     "id": 57,
+//     "title": "רייזר חשמלי מתקדם",
+//     "price": 530.00,
+//     "description": "רייזר עם מערכת איזון מתקדמת וסוללה חזקה.",
+//     "category": "רייזר",
+//     "image": " https://cdna.wobily.com/images/31cce05b-c046-490e-828c-636251f23606_500.png",
+//     "rating": { "rate": 4.7, "count": 75 }
+//   },
+//   {
+//     "id": 58,
+//     "title": "רייזר דו-גלגלי עם שלט רחוק",
+//     "price": 560.00,
+//     "description": "רייזר עם שלט רחוק לשליטה מלאה ומערכת בטיחות.",
+//     "category": "רייזר",
+//     "image": " https://cdna.wobily.com/images/d47ce532-1177-4bc0-acc3-c36f5ddbf575_500.jpg",
+//     "rating": { "rate": 4.8, "count": 80 }
+//   },
+//   {
+//     "id": 59,
+//     "title": "רייזר עם מנוע חזק וגלגלים רחבים",
+//     "price": 600.00,
+//     "description": "רייזר עמיד עם מנוע חזק וגלגלי שטח לנסיעות קשות.",
+//     "category": "רייזר",
+//     "image": "https://cdna.wobily.com/images/ef8c9a84-e53f-4516-9427-99f676377c06_500.png",
+//     "rating": { "rate": 4.7, "count": 78 }
+//   },
+//   {
+//     "id": 60,
+//     "title": "רייזר עם מערכת תאורה מלאה",
+//     "price": 580.00,
+//     "description": "רייזר עם תאורת LED קדמית ואחורית לנסיעות בלילה.",
+//     "category": "רייזר",
+//     "rating": { "rate": 4.6, "count": 70 }
+//   },
+//   {
+//     "id": 61,
+//     "title": "באגי שטח מהיר",
+//     "price": 1200.00,
+//     "description": "באגי עם מנוע 500cc וגלגלים עבים לנסיעות בשטח.",
+//     "category": "באגי",
+//     "image": "https://www.motorcenter.co.il/wp-content/uploads/Polaris-RZR-RS1-2.jpg",
+//     "rating": { "rate": 4.7, "count": 85 }
+//   },
+//   {
+//     "id": 62,
+//     "title": "באגי קומפקטי למשפחה",
+//     "price": 1400.00,
+//     "description": "באגי עם מושבים כפולים ומערכת בטיחות מתקדמת.",
+//     "category": "באגי",
+//     "image": "https://www.motorcenter.co.il/wp-content/uploads/RZR-Pro-R-4-seat.jpg",
+//     "rating": { "rate": 4.6, "count": 90 }
+//   },
+//   {
+//     "id": 63,
+//     "title": "באגי חשמלי עם סוללה עוצמתית",
+//     "price": 1600.00,
+//     "description": "באגי חשמלי ידידותי לסביבה עם סוללה לנסיעות ארוכות.",
+//     "category": "באגי",
+//     "image": "https://www.motorcenter.co.il/wp-content/uploads/RZR-Pro-R-1.jpg",
+//     "rating": { "rate": 4.8, "count": 75 }
+//   },
+//   {
+//     "id": 64,
+//     "title": "באגי שטח עם מתלים משודרגים",
+//     "price": 1350.00,
+//     "description": "באגי עם מערכת מתלים איכותית לנסיעות קשות.",
+//     "category": "באגי",
+//     "image": "https://www.motorcenter.co.il/wp-content/uploads/RZR-Turbo-R-4-seat.jpg",
+//     "rating": { "rate": 4.7, "count": 80 }
+//   },
+//   {
+//     "id": 65,
+//     "title": "באגי ספורטיבי עם עיצוב מודרני",
+//     "price": 1550.00,
+//     "description": "באגי בעל מראה ייחודי ומנוע עוצמתי.",
+//     "category": "באגי",
+//     "image": "https://www.motorcenter.co.il/wp-content/uploads/RZR-Turbo-R.jpg",
+//     "rating": { "rate": 4.5, "count": 70 }
+//   },
+//   {
+//     "id": 66,
+//     "title": "באגי משפחתי עם שני מושבים",
+//     "price": 1450.00,
+//     "description": "באגי רחב עם שתי כסאות נוחות ובטיחות גבוהה.",
+//     "category": "באגי",
+//     "image": "https://www.motorcenter.co.il/wp-content/uploads/RZR-200-EFI-1.jpg",
+//     "rating": { "rate": 4.6, "count": 88 }
+//   },
+//   {
+//     "id": 67,
+//     "title": "באגי קל משקל לנסיעות עירוניות",
+//     "price": 1300.00,
+//     "description": "באגי עם שלדה קלה וניידות גבוהה.",
+//     "category": "באגי",
+//     "image": "https://www.motorcenter.co.il/wp-content/uploads/Polaris-RZR-Pro-XP.jpg",
+//     "rating": { "rate": 4.4, "count": 60 }
+//   },
+//   {
+//     "id": 68,
+//     "title": "באגי עם מערכת שמע מובנית",
+//     "price": 1500.00,
+//     "description": "באגי עם מערכת שמע איכותית לנסיעות מהנות.",
+//     "category": "באגי",
+//     "image": "https://www.motorcenter.co.il/wp-content/uploads/RZR-1000-XP4-seater.jpg",
+//     "rating": { "rate": 4.7, "count": 72 }
+//   },
+//   {
+//     "id": 69,
+//     "title": "באגי מהיר עם מנוע טורבו",
+//     "price": 1650.00,
+//     "description": "באגי עם מנוע טורבו לנסיעה ספורטיבית במיוחד.",
+//     "category": "באגי",
+//     "image": "https://www.motorcenter.co.il/wp-content/uploads/RZR-1000-XP.jpg",
+//     "rating": { "rate": 4.8, "count": 78 }
+//   },
+//   {
+//     "id": 70,
+//     "title": "באגי עם תאורת LED מתקדמת",
+//     "price": 1400.00,
+//     "description": "באגי עם תאורת LED חזקה לנסיעה בלילה.",
+//     "category": "באגי",
+//     "image": "https://www.motorcenter.co.il/wp-content/uploads/Polaris-XPEDITION-XP.jpg",
+//     "rating": { "rate": 4.5, "count": 65 }
+//   }
+// ]

@@ -1,0 +1,127 @@
+/* מכולת כללית */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background: #fdf9f0; /* שמנת בהירה יותר ונקייה */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5a4b23; /* חום כהה אך רך יותר */
+}
+
+/* עיצוב מיכל ההתחברות וההרשמה */
+.login-container,
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-box, .signup-form {
+  background: #fffaf0; /* שמנת רכה מאוד */
+  padding: 58px 93px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(191, 167, 80, 0.25); /* צל עדין יותר */
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  transition: box-shadow 0.3s ease;
+}
+
+.login-box:hover,
+.signup-form:hover {
+  box-shadow: 0 15px 35px rgba(191, 167, 80, 0.4);
+}
+
+/* תוויות */
+.signup-form label {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #8c7e44; /* גוון חום-שמנת */
+}
+
+/* שדות קלט */
+.login-box input,
+.signup-form input {
+  padding: 14px 18px;
+  border: 1.8px solid #e4dcb3; /* שמנת כהה ועדין */
+  border-radius: 12px;
+  font-size: 16px;
+  color: #5a4b23;
+  background-color: #f7f3e9; /* שמנת בהירה ועדינה */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.login-box input::placeholder,
+.signup-form input::placeholder {
+  color: #c7b879; /* שמנת-זהב רך */
+  opacity: 0.7;
+}
+
+.login-box input:focus,
+.signup-form input:focus {
+  border-color: #c7b879;
+  box-shadow: 0 0 10px #c7b879;
+}
+
+/* הודעות שגיאה */
+.signup-form p {
+  color: #a44500;
+  font-size: 14px;
+  margin: -15px 0 10px;
+  font-weight: 600;
+}
+
+/* כפתורים */
+.login-box button,
+.signup-form button {
+  background-color: #fff9e0; /* שמנת רכה מאוד לכפתור */
+  color: #5a4b23; /* טקסט חום כהה */
+  padding: 14px 0;
+  font-weight: 700;
+  font-size: 18px;
+  border: 1.8px solid #c7b879; /* גבול שמנת זהב */
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(199, 184, 121, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.login-box button:hover,
+.signup-form button:hover {
+  background-color: #f0e8c0; /* גוון שמנת מעט כהה יותר בהובר */
+  color: #4a3e16;
+  box-shadow: 0 8px 22px rgba(169, 152, 72, 0.5);
+}
+
+.login-box button:disabled,
+.signup-form button:disabled {
+  background-color: #e5e1ca;
+  color: #a8a07e;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ריווח בין שדות */
+.signup-form>div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* רספונסיבי */
+@media (max-width: 480px) {
+  .login-box,
+  .signup-form {
+    padding: 30px 20px;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+}

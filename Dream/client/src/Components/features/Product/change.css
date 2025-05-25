@@ -1,0 +1,104 @@
+.add-product-form {
+  max-width: 600px;
+  width: 90%;
+  margin: 100px auto 40px auto;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(145deg, #fef6fb, #f6fefc, #fdfdfb, #f9f4ff);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(191, 167, 80, 0.15);
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5a4d1a;
+  transition: box-shadow 0.3s ease;
+}
+
+.add-product-form:hover {
+  box-shadow: 0 15px 40px rgba(191, 167, 80, 0.3);
+}
+
+.add-product-form label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #453c0b;
+}
+
+.add-product-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #d3baff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  color: #5a4d1a;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.add-product-form input:focus {
+  border-color: #b8a4ff;
+  outline: none;
+  background-color: #f9f6ff;
+}
+
+.add-product-form button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background: linear-gradient(to right, #e6cfff, #ffe3e3, #c2f0f0);
+  color: #3d2f5a;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: filter 0.25s ease;
+}
+
+.add-product-form button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.add-product-form button:disabled {
+  background-color: #eaeaea;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .add-product-form {
+    padding: 1.5rem 1rem;
+    max-width: 95%;
+  }
+  .add-product-form input,
+  .add-product-form button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+.add-product-form div {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.upLabale {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(to right, #fef9fb, #f0fff0);
+  color: #2b662b;
+  padding: 10px 20px;
+  border: 1px solid #b2d8b2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  animation: fadeOut 3s forwards;
+  font-weight: bold;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}

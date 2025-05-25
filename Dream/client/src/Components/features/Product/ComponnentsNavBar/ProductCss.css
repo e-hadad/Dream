@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fef6fb; /* גוון ורדרד-שמנת עדין */
+  color: #6b577f; /* סגול כהה רך */
+}
+
+/* מכולת המוצרים */
+.ProductCss {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 51px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* כרטיס מוצר */
+.productSignal {
+  background: linear-gradient(135deg, #fef6fb, #f6fefc, #fdfdfb);
+  border: 1px solid #ecd8f4;
+  border-radius: 16px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(200, 180, 220, 0.2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productSignal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(170, 150, 200, 0.3);
+}
+
+/* תמונה במוצר */
+.productSignal img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+/* כפתורים */
+.productSignal button {
+  background-color: #c298e8;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.productSignal button:hover {
+  background-color: #a97ed6;
+}
+
+/* שדה הקלט */
+.fillterProduct {
+  position: fixed;
+  margin-top:50px;
+  top: 100px;
+  right: 20px;
+  width: 220px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid #e2cde7;
+  font-size: 16px;
+  background-color: #fcf6fe;
+  box-shadow: 0 2px 6px rgba(210, 190, 220, 0.25);
+  z-index: 1000;
+  outline: none;
+}
+
+.fillterProduct::placeholder {
+  color: #a27cbf;
+}
+
+/* הודעות */
+p {
+  color: #a27cbf;
+  font-weight: 700;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* עגלת מיני */
+.miniCart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f6f9ff;
+  color: #5a7db2;
+  padding: 10px 20px;
+  border: 1px solid #bcd6f0;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(170, 170, 200, 0.15);
+  z-index: 1000;
+  animation: fadeOut 3s forwards;
+  font-weight: bold;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
