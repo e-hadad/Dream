@@ -20157,3 +20157,5 @@ Tue, 03 Jun 2025 17:19:54 GMT  : /user/getCartById/2
 Tue, 03 Jun 2025 17:19:54 GMT  : /order
 Tue, 03 Jun 2025 17:19:54 GMT  : /product
 Tue, 03 Jun 2025 17:19:54 GMT  : /user
+Wed, 04 Jun 2025 15:16:06 GMT  : /product
+Wed, 04 Jun 2025 15:16:06 GMT  : /product
