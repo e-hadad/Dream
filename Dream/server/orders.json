@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "userId": "2",
+    "orderDate": "3.6.2025",
+    "dueDate": "2025-06-10T17:18:29.152Z",
+    "address": "fd fd dfdf",
+    "nameToRemittance": "df",
+    "cart": [
+      {
+        "title": "סט מצעים כותנה - דגם דורון ורוד",
+        "price": 119,
+        "count": 1
+      },
+      {
+        "title": "סט מצעים כותנה - דגם אריאל",
+        "price": 119,
+        "count": 1
+      }
+    ],
+    "status": "ההזמנה בוצעה בהצלחה",
+    "id": 1
+  }
+]

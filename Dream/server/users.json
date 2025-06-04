@@ -16,36 +16,12 @@
     "email": "@gmail.com",
     "cart": [
       {
-        "id": 41,
-        "title": "סט מצעים כותנה - דגם אנטוני",
-        "price": 171,
-        "category": "BeddingTransit",
-        "image": "/images/BeddingTransit/11.webp",
-        "count": 1
-      },
-      {
-        "id": 40,
-        "title": "סט מצעים כותנה - דגם תלמה",
-        "price": 171,
-        "category": "BeddingTransit",
-        "image": "/images/BeddingTransit/10.webp",
-        "count": 1
-      },
-      {
-        "id": 28,
-        "title": "סט מצעים כותנה - דגם אנטוני",
-        "price": 171,
-        "category": "BeddingChildren",
-        "image": "/images/BeddingChildren/11.webp",
-        "count": 1
-      },
-      {
-        "id": 32,
-        "title": "סט מצעים כותנה - דגם אריאל",
+        "id": 3,
+        "title": "סט מצעים כותנה - דגם דורון ורוד",
         "price": 119,
         "description": "",
-        "category": "BeddingTransit",
-        "image": "/images/BeddingTransit/2.webp",
+        "category": "BeddingSleep",
+        "image": "/images/BeddingSleep/3.webp",
         "count": 1
       }
     ]
