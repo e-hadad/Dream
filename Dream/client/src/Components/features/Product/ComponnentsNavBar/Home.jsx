@@ -1,5 +1,5 @@
 import React from 'react';
-import myImage1 from '../ComponnentsNavBar/images/1.webp';
+// import myImage1 from '../ComponnentsNavBar/images/1.webp';
 import myImage2 from '../ComponnentsNavBar/images/2.webp';
 import myImage3 from '../ComponnentsNavBar/images/3.webp';
 import myImage4 from '../ComponnentsNavBar/images/4.webp';
@@ -22,7 +22,7 @@ const Home = () => {
 
             <div className="button-grid">
                 <button onClick={() => toProducts("BeddingYouth")}>
-                    <img src={myImage1} alt="BeddingYouth" />
+                    {/* <img src={myImage1} alt="BeddingYouth" /> */}
                 </button>
                 <button onClick={() => toProducts("BeddingTransit")}>
                     <img src={myImage2} alt="BeddingTransit" />
