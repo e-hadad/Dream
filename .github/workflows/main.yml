@@ -19,23 +19,23 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            set -e  # עצור את הסקריפט אם פקודה נכשלת
+            set -e  # עצור אם יש שגיאה
             
-            # 1. הגדרת נתיבים משתנים כדי למנוע טעויות
+            # 1. הגדרת נתיבים מדויקת (פעמיים Dream)
             PROJECT_ROOT="/home/ubuntu/Dream/Dream"
-            CLIENT_DIR="$PROJECT_ROOT/Dream/client"
+            CLIENT_DIR="/home/ubuntu/Dream/Dream/client"
             
             # 2. עדכון קוד
             cd $PROJECT_ROOT
             git pull origin master
             
-            # 3. בנייה - הוספת sudo כדי לוודא שיש הרשאות למחוק את dist הקודם
+            # 3. בנייה
             cd $CLIENT_DIR
             sudo rm -rf dist
             npm install
             npm run build
             
-            # 4. בדיקה שה-dist באמת נוצר לפני שמוחקים את האתר הקיים
+            # 4. העתקה לאתר (רק אם ה-build הצליח)
             if [ -d "dist" ]; then
                 sudo rm -rf /var/www/html/*
                 sudo cp -r dist/* /var/www/html/
