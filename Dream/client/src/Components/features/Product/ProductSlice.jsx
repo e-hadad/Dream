@@ -8,7 +8,7 @@ const initialState = {
 }
 export const getListProduct = createAsyncThunk("products", async () => {
     try {
-        const response = await axios.get("http://localhost:4000/product");
+        const response = await axios.get("/api/product");
         console.log(response.data);
         return response.data;
     }
@@ -18,7 +18,7 @@ export const getListProduct = createAsyncThunk("products", async () => {
 })
 export const deleteProduct = createAsyncThunk("deleteProduct", async (id, thunkApi) => {
     try {
-        const response = await axios.delete(`http://localhost:4000/product/${id}`);
+        const response = await axios.delete(`/api/product/${id}`);
         console.log(response);
         return { id };
     }
@@ -28,7 +28,7 @@ export const deleteProduct = createAsyncThunk("deleteProduct", async (id, thunkA
 })
 export const addProduct = createAsyncThunk("addProduct", async (product) => {
     try {
-        const response = await axios.post("http://localhost:4000/product", product);
+        const response = await axios.post("/api/product", product);
         console.log(response.data);
         return response.data;
     }
@@ -38,7 +38,7 @@ export const addProduct = createAsyncThunk("addProduct", async (product) => {
 })
 export const UpdateProduct = createAsyncThunk("UpdateProduct", async (product) => {
     try {
-        const response = await axios.put(`http://localhost:4000/product/${product.id}`, product);
+        const response = await axios.put(`/api/product/${product.id}`, product);
         console.log(response.data);
         return product;
     }
@@ -51,7 +51,7 @@ export const UpdateProduct = createAsyncThunk("UpdateProduct", async (product) =
 // export const addCart=createAsyncThunk("cart/addToCart",async ({userId,product},thunkApi) => {
 //     try{
 //         console.log("??????????????????????????????????");
-//         const response=await axios.post(`http://localhost:4000/user/addProductToCart/${userId}`,product)
+//         const response=await axios.post(`/api/user/addProductToCart/${userId}`,product)
 //         return response.data;
 //     }
 //     catch(error){
@@ -62,7 +62,7 @@ export const UpdateProduct = createAsyncThunk("UpdateProduct", async (product) =
 // export const deleteFromCart=createAsyncThunk("cart/delToCart",async ({userId,productId},thunkApi) => {
 //     try{
 //         console.log("????????????????delete??????????????????");
-//         const response=await axios.delete(`http://localhost:4000/user/deleteProductFromCart/${userId}/${productId}`)
+//         const response=await axios.delete(`/api/user/deleteProductFromCart/${userId}/${productId}`)
 //         return response.data;
 //     }
 //     catch(error){
