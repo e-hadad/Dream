@@ -19,21 +19,20 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            # 1. עדכון הקוד בתיקיית המקור
+            # 1. כניסה ומשיכת קוד
             cd /home/ubuntu/Dream/Dream
             git pull
             
-            # 2. בניית הפרויקט בנתיב המלא
-            cd /home/ubuntu/Dream/Dream/Dream/client
+            # 2. כניסה עמוקה לבנייה
+            cd Dream/client
             npm install
             npm run build
             
-            # 3. ניקוי תיקיית השרת והעתקה מהנתיב שמצאנו ב-find
+            # 3. העתקה מתוך תיקיית ה-dist שנוצרה הרגע
+            # שימי לב: הנתיב הוא ~/Dream/Dream/Dream/client/dist/
             sudo rm -rf /var/www/html/*
-            sudo cp -r /home/ubuntu/Dream/Dream/Dream/client/dist/* /var/www/html/            
-            # 4. רענון השירות
+            sudo cp -r /home/ubuntu/Dream/Dream/client/dist/* /var/www/html/
+            
+            # 4. רענון
             sudo systemctl restart node-service
-            sudo systemctl stop node-service
-            sudo systemctl start node-service
-            # רענון גם ל-Nginx ליתר ביטחון
             sudo systemctl restart nginx
