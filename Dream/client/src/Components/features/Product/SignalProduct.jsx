@@ -9,7 +9,7 @@ const signalProduct = (props) => {
     <>
     <div className="productSignal">
         <h3>{p.title}</h3>
-        <img src={`http://localhost:4000${p.image}`} alt={p.id} />
+        <img src={`/api${p.image}`} alt={p.id} />
         <h5>{ p.price + " שח"}</h5>
         {/* <h6>{p.description}</h6> */}
         <h6>{"כמות במלאי: "+p.count }</h6>
