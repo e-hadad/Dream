@@ -10,7 +10,7 @@ const initialState = {
 
 export const getListUser = createAsyncThunk("Users",async()=>{
     try{
-        const response = await axios.get("http://localhost:4000/user");
+        const response = await axios.get("/api/user");
         // const response = await axios.get("https://fakestoreapi.com/products");
         // const response A= await axios.get("https://jsonplaceholder.typicode.com/posts");
         console.log(response.data);
@@ -22,7 +22,7 @@ export const getListUser = createAsyncThunk("Users",async()=>{
 })
 export const addUser = createAsyncThunk("addUser",async(user)=>{
     try{
-        const response = await axios.post("http://localhost:4000/user",user);
+        const response = await axios.post("/api/user",user);
         // const response = await axios.get("https://fakestoreapi.com/products");
         // const response A= await axios.get("https://jsonplaceholder.typicode.com/posts");
         console.log(response.data);
