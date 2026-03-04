@@ -27,11 +27,13 @@ jobs:
             cd client
             npm install
             npm run build
-            
             sudo rm -rf /var/www/html/*
             sudo cp -r dist/* /var/www/html/
 
+            cd ../server
+            npm install
+            
             sudo systemctl restart nginx
             sudo systemctl restart node-service
             
-            echo "Deployment Complete!"
+            echo "Deployment Complete! Your site is secure and updated."
