@@ -102,7 +102,7 @@ export default function LoginShow() {
             <div className="login-box">
             <input type="text" ref={nameUser} placeholder="שם משתמש" />
         <input type="password" ref={password} placeholder="סיסמא" />
-        <button onClick={checkUser}>כניסה</button></div>)}
+        <button onClick={checkUser}> כניסה לאתר DREAM</button></div>)}
         </div>
         </>
     ) 
