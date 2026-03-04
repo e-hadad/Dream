@@ -3,7 +3,7 @@ name: CI/CD Deploy
 on:
   push:
     branches:
-      - master  # ודאי שזה שם הענף שלך
+      - master
 
 jobs:
   deploy:
