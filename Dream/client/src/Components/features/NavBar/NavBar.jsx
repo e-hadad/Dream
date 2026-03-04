@@ -192,7 +192,7 @@ const NavBar = () => {
         </div>
         <NavLink to="/Home"><img src={myImage} alt="לוגו" className="navbar-logo" /></NavLink>
 
-        <NavLink to="/Login">התחברות</NavLink>
+        <NavLink to="/Login"> התחברות לאתר DREAM </NavLink>
         <NavLink to="/SignUp">הרשמה</NavLink>
       </div>
 
