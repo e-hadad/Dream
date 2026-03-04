@@ -1,25 +1,25 @@
 <!-- פרויקט בריאקט- קריאות שרת
 
 התחברות-לאחר שהמשתמש ממלא את פרטיו בעמוד לוגין (התחברות)
-http://localhost:4000l/user/login    method: 'post' 
+/api/user/login    method: 'post' 
 
 יצירת משתמש חדש
-http://localhost:4000/user    method: 'post' 
+/api/user    method: 'post' 
 
 יצירת מוצר חדש
-http://localhost:4000/product    method: 'post'
+/api/product    method: 'post'
 
 קבלת כל המוצרים
-http://localhost:4000/product    method: 'get' 
+/api/product    method: 'get' 
 
 יצירת הזמנה חדשה
-http://localhost:4000/order    method: 'post' 
+/api/order    method: 'post' 
 
 קבלת כל ההזמנות
-http://localhost:4000/order    method: 'get' 
+/api/order    method: 'get' 
 
 קבלת הזמנה לפי מזהה id 
-http://localhost:4000/order/id    method: 'get' 
+/api/order/id    method: 'get' 
  -->
 
 
