@@ -18,17 +18,15 @@ jobs:
           host: 13.48.133.135
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            cd ~/Dream/Dream
+         script: |
+            cd /home/ubuntu/Dream/Dream
             git pull
             
-            # כניסה עמוקה לתיקיית הקליינט
             cd Dream/client
             npm install
             npm run build
             
-            # העתקה מהתיקייה שבה נוצר ה-build (dist) לתיקיית השרת
-            sudo cp -r dist/* /var/www/html/
+            sudo rm -rf /var/www/html/*
+            sudo cp -r /home/ubuntu/Dream/Dream/client/dist/* /var/www/html/
             
-            # חזרה אחורה ורענון השרת
             sudo systemctl restart node-service
