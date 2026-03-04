@@ -18,20 +18,20 @@ jobs:
           host: 13.48.133.135
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-         script: |
-            # 1. עדכון קוד
+          script: |
+            # 1. כניסה לתיקיית המקור ועדכון קוד
             cd /home/ubuntu/Dream/Dream
-            git pull
+            git pull origin master
             
-            # 2. כניסה לקליינט ומחיקת תיקיית dist קודמת (חשוב מאוד!)
+            # 2. כניסה לתיקיית הקליינט
             cd Dream/client
-            rm -rf dist
             
-            # 3. בנייה מחדש נקייה
+            # 3. מחיקה ובנייה מחדש עם הרשאות מתאימות
+            sudo rm -rf dist
             npm install
             npm run build
             
-            # 4. מחיקה מוחלטת של מה שיש ב-Nginx והעתקה חדשה
+            # 4. ניקוי תיקיית היעד והעתקה
             sudo rm -rf /var/www/html/*
             sudo cp -r dist/* /var/www/html/
             
