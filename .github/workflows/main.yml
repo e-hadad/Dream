@@ -3,7 +3,7 @@ name: CI/CD Deploy
 on:
   push:
     branches:
-      - master  # הענף שלך ב-GitHub
+      - master  # ודאי שזה שם הענף שלך
 
 jobs:
   deploy:
@@ -19,19 +19,18 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            # 1. כניסה לתיקייה ועדכון קוד מה-GitHub
+            set -e
+
             cd ~/Dream/Dream
             git pull origin master
 
-            # 2. בנייה מחדש של ה-Client (React)
             cd client
             npm install
             npm run build
             
-            # 3. העתקת הקבצים המוכנים לתיקיית האתר של Nginx
+            sudo rm -rf /var/www/html/*
             sudo cp -r dist/* /var/www/html/
 
-            # 4. רענון השירותים (Nginx והשרת של Node)
             sudo systemctl restart nginx
             sudo systemctl restart node-service
             
