@@ -19,15 +19,31 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/ubuntu/Dream/Dream
+            set -e  # עצור את הסקריפט אם פקודה נכשלת
+            
+            # 1. הגדרת נתיבים משתנים כדי למנוע טעויות
+            PROJECT_ROOT="/home/ubuntu/Dream/Dream"
+            CLIENT_DIR="$PROJECT_ROOT/Dream/client"
+            
+            # 2. עדכון קוד
+            cd $PROJECT_ROOT
             git pull origin master
-            cd /home/ubuntu/Dream/Dream/Dream/client
+            
+            # 3. בנייה - הוספת sudo כדי לוודא שיש הרשאות למחוק את dist הקודם
+            cd $CLIENT_DIR
             sudo rm -rf dist
             npm install
             npm run build
-            sudo rm -rf /var/www/html/*
-            sudo cp -r /home/ubuntu/Dream/Dream/Dream/client/dist/* /var/www/html/
+            
+            # 4. בדיקה שה-dist באמת נוצר לפני שמוחקים את האתר הקיים
+            if [ -d "dist" ]; then
+                sudo rm -rf /var/www/html/*
+                sudo cp -r dist/* /var/www/html/
+                echo "Deployment successful!"
+            else
+                echo "Error: dist directory not found!"
+                exit 1
+            fi
             
             # 5. רענון
-            sudo systemctl restart node-service
             sudo systemctl restart nginx
