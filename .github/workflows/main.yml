@@ -1,0 +1,28 @@
+name: CI/CD Deploy
+
+on:
+  push:
+    branches:
+      - master  # ודאי שזה שם הענף שלך
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Server via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: 13.48.133.135
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ~/Dream/Dream
+            git pull
+            cd Dream/client
+            npm install
+            npm run build
+            sudo cp -r dist/* /var/www/html/
+            sudo systemctl restart node-service
