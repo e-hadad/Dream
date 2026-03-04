@@ -34,3 +34,7 @@ jobs:
             
             # 4. רענון השירות
             sudo systemctl restart node-service
+            sudo systemctl stop node-service
+            sudo systemctl start node-service
+            # רענון גם ל-Nginx ליתר ביטחון
+            sudo systemctl restart nginx
