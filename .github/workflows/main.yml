@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master  # ודאי שזה שם הענף שלך
-
+      
 jobs:
   deploy:
     runs-on: ubuntu-latest
