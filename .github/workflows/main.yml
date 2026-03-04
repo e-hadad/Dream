@@ -30,8 +30,7 @@ jobs:
             
             # 3. ניקוי תיקיית השרת והעתקה מהנתיב שמצאנו ב-find
             sudo rm -rf /var/www/html/*
-            sudo cp -r /home/ubuntu/Dream/Dream/client/dist/* /var/www/html/
-            
+            sudo cp -r /home/ubuntu/Dream/Dream/Dream/client/dist/* /var/www/html/            
             # 4. רענון השירות
             sudo systemctl restart node-service
             sudo systemctl stop node-service
