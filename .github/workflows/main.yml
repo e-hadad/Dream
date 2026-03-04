@@ -21,8 +21,14 @@ jobs:
           script: |
             cd ~/Dream/Dream
             git pull
+            
+            # כניסה עמוקה לתיקיית הקליינט
             cd Dream/client
             npm install
             npm run build
+            
+            # העתקה מהתיקייה שבה נוצר ה-build (dist) לתיקיית השרת
             sudo cp -r dist/* /var/www/html/
+            
+            # חזרה אחורה ורענון השרת
             sudo systemctl restart node-service
