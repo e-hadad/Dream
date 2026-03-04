@@ -9,7 +9,7 @@ const initialState = {
 
 export const getListCart = createAsyncThunk("Carts", async () => {
     try {
-        const response = await axios.get("http://localhost:4000/cart");
+        const response = await axios.get("/api/cart");
         // console.log(response.data);
         return response.data;
     }
@@ -19,7 +19,7 @@ export const getListCart = createAsyncThunk("Carts", async () => {
 })
 export const getCartById = createAsyncThunk("cart", async (id) => {
     try {
-        const response = await axios.get(`http://localhost:4000/user/getCartById/${id}`);
+        const response = await axios.get(`/api/user/getCartById/${id}`);
         // console.log("cart", response.data);
 
         return response.data;
@@ -32,7 +32,7 @@ export const getCartById = createAsyncThunk("cart", async (id) => {
 
 // export const addCart = createAsyncThunk("addCart", async (cart, thunkAPI) => {
 //     try {
-//         const response = await axios.post("http://localhost:4000/order", cart);
+//         const response = await axios.post("/api/order", cart);
 //         return response.data; // מחזיר את מה שהשרת מחזיר
 //     } catch (error) {
 //         console.error("Error adding to cart:", error);
@@ -42,7 +42,7 @@ export const getCartById = createAsyncThunk("cart", async (id) => {
 
 export const addOrder = createAsyncThunk("addOrder", async (order) => {
     try {
-        const response = await axios.post("http://localhost:4000/order", order);
+        const response = await axios.post("/api/order", order);
         // const response = await axios.get("https://fakestoreapi.com/products");
         // const response A= await axios.get("https://jsonplaceholder.typicode.com/posts");
         // console.log(response.data);
@@ -54,7 +54,7 @@ export const addOrder = createAsyncThunk("addOrder", async (order) => {
 })
 export const getListOrder = createAsyncThunk("orders", async () => {
     try {
-        const response = await axios.get("http://localhost:4000/order");
+        const response = await axios.get("/api/order");
         // const response = await axios.get("https://fakestoreapi.com/products");
         // const response A= await axios.get("https://jsonplaceholder.typicode.com/posts");
         // console.log(response.data);
@@ -68,7 +68,7 @@ export const getListOrder = createAsyncThunk("orders", async () => {
 //   "cart/updateCount",
 //   async ({ userId, productId }, thunkApi) => {
 //     try {
-//       const response = await axios.put(`http://localhost:4000/user/updateCount/${userId}/${productId}`);
+//       const response = await axios.put(`/api/user/updateCount/${userId}/${productId}`);
 //       return response.data.cart;
 //     } catch (error) {
 //       return thunkApi.rejectWithValue(error.response?.data || "שגיאה לא ידועה");
@@ -78,7 +78,7 @@ export const getListOrder = createAsyncThunk("orders", async () => {
 export const del1productFromCart = createAsyncThunk("cart/del1productFromCart", async ({ userId, product }, thunkApi) => {
     try {
         // console.log("??????????????????????????????????");
-        const response = await axios.post(`http://localhost:4000/user/del1ProductToCart/${userId}`, product)
+        const response = await axios.post(`/api/user/del1ProductToCart/${userId}`, product)
         return response.data;
     }
     catch (error) {
@@ -88,7 +88,7 @@ export const del1productFromCart = createAsyncThunk("cart/del1productFromCart", 
 })
 export const deleteCartUser = createAsyncThunk("cart/daleteCart", async (id) => {
     try {
-        const response = await axios.delete(`http://localhost:4000/user/deleteCartUser/${id}`);
+        const response = await axios.delete(`/api/user/deleteCartUser/${id}`);
         // console.log("cart", response.data);
 
         return response.data;
@@ -101,7 +101,7 @@ export const deleteCartUser = createAsyncThunk("cart/daleteCart", async (id) => 
 export const addCart = createAsyncThunk("cart/addToCart", async ({ userId, product }, thunkApi) => {
     try {
         // console.log("??????????????????????????????????");
-        const response = await axios.post(`http://localhost:4000/user/addProductToCart/${userId}`, product)
+        const response = await axios.post(`/api/user/addProductToCart/${userId}`, product)
         return response.data;
     }
     catch (error) {
@@ -113,7 +113,7 @@ export const addCart = createAsyncThunk("cart/addToCart", async ({ userId, produ
 export const deleteFromCart=createAsyncThunk("cart/delToCart",async ({userId,productId},thunkApi) => {
     try{
         // console.log("????????????????delete??????????????????");
-        const response=await axios.delete(`http://localhost:4000/user/deleteProductFromCart/${userId}/${productId}`)
+        const response=await axios.delete(`/api/user/deleteProductFromCart/${userId}/${productId}`)
         return response.data;
     }
     catch(error){
@@ -123,7 +123,7 @@ export const deleteFromCart=createAsyncThunk("cart/delToCart",async ({userId,pro
 export const deleteOrder=createAsyncThunk("deleteOrder/order",async ({userId,productId},thunkApi) => {
     try{
         // console.log("????????????????delete??????????????????");
-        const response=await axios.delete(`http://localhost:4000/order/${userId}/${productId}`)
+        const response=await axios.delete(`/api/order/${userId}/${productId}`)
         return response.data;
     }
     catch(error){
