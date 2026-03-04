@@ -3,8 +3,8 @@ name: CI/CD Deploy
 on:
   push:
     branches:
-      - master  # ודאי שזה שם הענף שלך
-      
+      - master
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,15 +18,19 @@ jobs:
           host: 13.48.133.135
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-         script: |
+          script: |
+            # 1. עדכון הקוד בתיקיית המקור
             cd /home/ubuntu/Dream/Dream
             git pull
             
-            cd Dream/client
+            # 2. בניית הפרויקט בנתיב המלא
+            cd /home/ubuntu/Dream/Dream/Dream/client
             npm install
             npm run build
             
+            # 3. ניקוי תיקיית השרת והעתקה מהנתיב שמצאנו ב-find
             sudo rm -rf /var/www/html/*
             sudo cp -r /home/ubuntu/Dream/Dream/client/dist/* /var/www/html/
             
+            # 4. רענון השירות
             sudo systemctl restart node-service
