@@ -3,7 +3,7 @@ name: CI/CD Deploy
 on:
   push:
     branches:
-      - master
+      - master  # הענף שלך ב-GitHub
 
 jobs:
   deploy:
@@ -19,31 +19,20 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            set -e  # עצור אם יש שגיאה
-            
-            # 1. הגדרת נתיבים מדויקת (פעמיים Dream)
-            PROJECT_ROOT="/home/ubuntu/Dream/Dream"
-            CLIENT_DIR="/home/ubuntu/Dream/Dream/client"
-            
-            # 2. עדכון קוד
-            cd $PROJECT_ROOT
+            # 1. כניסה לתיקייה ועדכון קוד מה-GitHub
+            cd ~/Dream/Dream
             git pull origin master
-            
-            # 3. בנייה
-            cd $CLIENT_DIR
-            sudo rm -rf dist
+
+            # 2. בנייה מחדש של ה-Client (React)
+            cd client
             npm install
             npm run build
             
-            # 4. העתקה לאתר (רק אם ה-build הצליח)
-            if [ -d "dist" ]; then
-                sudo rm -rf /var/www/html/*
-                sudo cp -r dist/* /var/www/html/
-                echo "Deployment successful!"
-            else
-                echo "Error: dist directory not found!"
-                exit 1
-            fi
-            
-            # 5. רענון
+            # 3. העתקת הקבצים המוכנים לתיקיית האתר של Nginx
+            sudo cp -r dist/* /var/www/html/
+
+            # 4. רענון השירותים (Nginx והשרת של Node)
             sudo systemctl restart nginx
+            sudo systemctl restart node-service
+            
+            echo "Deployment Complete!"
