@@ -19,20 +19,15 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            # 1. עדכון קוד
             cd /home/ubuntu/Dream/Dream
             git pull origin master
-            
-            # 2. בנייה בתיקייה העמוקה
-            cd Dream/client
+            cd /home/ubuntu/Dream/Dream/Dream/client
             sudo rm -rf dist
             npm install
             npm run build
-            
-            # 3. העתקה - שימי לב לשינוי כאן: השתמשתי ב-$(pwd) כדי לקחת בדיוק מה שנבנה הרגע
             sudo rm -rf /var/www/html/*
             sudo cp -r /home/ubuntu/Dream/Dream/Dream/client/dist/* /var/www/html/
             
-            # 4. רענון
+            # 5. רענון
             sudo systemctl restart node-service
             sudo systemctl restart nginx
