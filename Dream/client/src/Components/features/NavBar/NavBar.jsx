@@ -50,7 +50,7 @@ const NavBar = () => {
         </div>
         <NavLink to="/Home"><img src={myImage} alt="לוגו" className="navbar-logo" /></NavLink>
 
-        <NavLink to="/Login"> התחברות לאתר DREAM </NavLink>
+        <NavLink to="/Login">להתחבר</NavLink>
         <NavLink to="/SignUp">הרשמה</NavLink>
       </div>
 
@@ -62,7 +62,7 @@ const NavBar = () => {
       <div className="navbar-left">
         {admin === "manager" && <NavLink to="/AddProduct">הוספת מוצר</NavLink>}
         {admin === "manager" ? (
-          <NavLink to="/Users">רשימת משתמשים</NavLink>
+          <NavLink to="/Users">משתמשים</NavLink>
         ) : admin === "user" ? (
           <>
             <NavLink
