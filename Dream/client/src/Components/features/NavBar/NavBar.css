@@ -1,0 +1,139 @@
+/* NavBar.css - גרסה רכה בהתאמה לסגנון productSignal */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfcfd;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: linear-gradient(135deg, #fef6fb, #f6fefc, #fdfdfb);
+  box-shadow: 0 4px 12px rgba(210, 190, 220, 0.2);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  direction: rtl;
+  border-bottom: 1px solid #f3e9fa;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-center {
+  flex-grow: 1;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navbar-logo {
+  /* height: 45px; */
+  width: 7vw;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(200, 180, 220, 0.2);
+}
+
+.navbar a {
+  color: #7a6d8a;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: #f3e9fa;
+  color: #6b577f;
+  box-shadow: 0 0 8px rgba(180, 160, 200, 0.2);
+}
+
+.logout-icon {
+  cursor: pointer;
+  color: #c298e8;
+  font-size: 24px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-icon:hover {
+  color: #6b577f;
+  filter: drop-shadow(0 0 4px #c298e8);
+  transform: scale(1.05);
+}
+
+.logout-placeholder {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* רספונסיביות למסכים קטנים */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px;
+  }
+  .navbar-left,
+  .navbar-right,
+  .navbar-center {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .navbar-logo {
+    height: 36px;
+  }
+  .navbar a {
+    font-size: 1rem;
+    padding: 8px;
+  }
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: linear-gradient(135deg, #fff0f6, #fff7fa);
+  box-shadow: 0 4px 12px rgba(235, 200, 220, 0.15);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  direction: rtl;
+  border-bottom: 1px solid #f3e1eb;
+}
+.navbar {
+  padding: 6px 24px;
+}
+/* .navbar-logo {
+  height: 30px;
+  width: auto;
+} */
+
+.navbar {
+  height: 85px; /* או כל גובה שמתאים */
+  padding: 0 24px; /* אם רוצים להקטין גם את הפדינג */
+}
+.logout-icon{
+  width: 25vw;
+}
